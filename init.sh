@@ -5,8 +5,7 @@ sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y tree \
                     screen \
                     tmux \
-                    wget \
-                    ripgrep
+                    wget
 
 # vimrc settings
 echo "
@@ -17,8 +16,6 @@ set autoread
 set hidden
 set showcmd
 set number
-set cursorline
-set cursorcolumn
 set virtualedit=onemore
 set smartindent
 set visualbell
@@ -37,7 +34,7 @@ set incsearch
 set wrapscan
 set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
-hi Search ctermfg=black ctermbg=white
+hi Search ctermfg=white ctermbg=cyan
 " > ~/.vimrc
 
 # tmux conf settings
@@ -72,4 +69,4 @@ bind -T copy-mode-vi C-v send -X rectangle-toggle
 bind -T copy-mode-vi y send -X copy-selection
 bind -T copy-mode-vi Y send -X copy-line
 bind-key C-p paste-buffer
-" > tmux.conf
+" > ~/.tmux.conf
