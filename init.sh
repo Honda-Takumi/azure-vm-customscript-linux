@@ -39,7 +39,6 @@ hi Search ctermfg=white ctermbg=cyan
 
 # tmux conf settings
 echo "
-set-option -g default-shell /bin/zsh
 set-option -g default-terminal screen-256color
 set -g terminal-overrides 'xterm:colors=256'
 set -g prefix C-q
@@ -60,6 +59,7 @@ bind -r J resize-pane -D 5
 bind -r K resize-pane -U 5
 bind -r L resize-pane -R 5
 bind - split-window -v
+bind | split-window -h
 set-option -g base-index 1
 set-option -g mouse on
 setw -g mode-keys vi
